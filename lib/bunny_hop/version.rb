@@ -1,3 +1,3 @@
-module BunnyHop
-  VERSION = "0.1.0"
+class BunnyHop
+  VERSION = "0.1.1"
 end
