@@ -47,15 +47,11 @@ class BunnyHop
     queue = @channel.queue(queue)
     exchange = @channel.default_exchange
 
-    queue.subscribe do |_delivery_info, properties, payload|
-      puts _delivery_info
-      puts properties
-      puts payload
-      
-      result = yield
+    queue.subscribe do |_delivery_info, properties, payload|     
+      result = yield(payload)
 
       exchange.publish(
-        result,
+        result.to_s,
         routing_key: properties.reply_to,
         correlation_id: properties.correlation_id
       )

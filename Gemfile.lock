@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    bunny_hop (0.1.1)
+    bunny_hop (0.1.2)
       bunny (>= 2.14.1)
+      thor
 
 GEM
   remote: https://rubygems.org/
@@ -25,6 +26,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    thor (1.0.1)
 
 PLATFORMS
   ruby
