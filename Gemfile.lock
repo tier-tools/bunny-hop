@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bunny_hop (0.1.3)
+    bunny_hop (0.1.4)
       bunny (>= 2.14.1)
       thor
 

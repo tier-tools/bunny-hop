@@ -57,4 +57,14 @@ class BunnyHop
       )
     end
   end
+
+  module ControllerHelper
+    def on(queue)
+      @__bunny ||= BunnyHop.new
+      puts "subscribe to #{queue}"
+      @__bunny.subscribe(queue.to_s) do |payload|
+        yield(payload)
+      end
+    end
+  end
 end
