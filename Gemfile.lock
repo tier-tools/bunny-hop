@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bunny_hop (0.1.1)
+    bunny_hop (0.1.2)
       bunny (>= 2.14.1)
 
 GEM

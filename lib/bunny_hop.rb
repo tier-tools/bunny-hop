@@ -55,7 +55,7 @@ class BunnyHop
       result = yield
 
       exchange.publish(
-        result,
+        result.to_s,
         routing_key: properties.reply_to,
         correlation_id: properties.correlation_id
       )
